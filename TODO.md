@@ -1,0 +1,3 @@
+- [ ] Implement animated DLR sequence on the arrival/home screen: DISCOVER → LIST → RECOMMEND → AnimeDLR
+- [ ] Verify animation runs automatically on landing and does not block the “Begin” button
+- [ ] Quick visual/manual test (run Vite dev server)
