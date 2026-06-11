@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 const ANILIST_URL = "https://graphql.anilist.co";
 
