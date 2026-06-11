@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 const ANILIST_URL = "https://graphql.anilist.co";
 
@@ -1067,7 +1068,9 @@ export default function MIRAI() {
         </div>
         <button className="begin-btn" onClick={()=>setScreen("invitation")}>Begin</button>
       </div>
-    </div></>
+    </div>
+    <Analytics />
+    </>
   );
 
   // ── INVITATION ─────────────────────────────────────────────────────────────
@@ -1083,7 +1086,9 @@ export default function MIRAI() {
           </button>
         ))}
       </div>
-    </div></>
+    </div>
+    <Analytics />
+    </>
   );
 
   // ── MOOD ───────────────────────────────────────────────────────────────────
@@ -1238,7 +1243,9 @@ export default function MIRAI() {
           )}
         </>
       )}
-    </div></>
+    </div>
+    <Analytics />
+    </>
   );}
 
   // ── WATCHLIST ──────────────────────────────────────────────────────────────
@@ -1259,6 +1266,7 @@ export default function MIRAI() {
     <BottomTabs screen={screen} setScreen={setScreen} watchlist={watchlist}/>
     <WatchlistScreen watchlist={watchlist} onRemove={toggleWatchlist} onOpen={setDetailAnime} onBack={()=>setScreen("app")}/>
     {detailAnime&&<DetailOverlay anime={detailAnime} likedAnime={likedAnime} selectedMoods={selectedMoods} onClose={()=>setDetailAnime(null)} onLike={toggleAnime} onSave={toggleWatchlist} watchlist={watchlist} openAnime={setDetailAnime}/>}
+    <Analytics />
     </>
   );
 
@@ -1302,7 +1310,9 @@ export default function MIRAI() {
           <button className="reveal-btn" disabled={likedAnime.length===0||recoLoading} onClick={handleReveal}>{recoLoading?"Loading…":"Reveal Recommendations"}</button>
         </div>
       </div>
-    </div></>
+    </div>
+    <Analytics />
+    </>
   );
 
   // ── REVEAL ─────────────────────────────────────────────────────────────────
@@ -1327,7 +1337,9 @@ export default function MIRAI() {
           <button className="begin-btn" style={{opacity:1,animation:"none",borderColor:"var(--ember)",color:"var(--ember)"}} onClick={launchApp}>{recoLoading?"Loading…":"See My Recommendations →"}</button>
         </div>
       </div>
-    </div></>
+    </div>
+    <Analytics />
+    </>
   );
 
   // ── MAIN APP ───────────────────────────────────────────────────────────────
@@ -1409,6 +1421,7 @@ export default function MIRAI() {
     </div>
 
     {detailAnime&&<DetailOverlay anime={detailAnime} likedAnime={likedAnime} selectedMoods={selectedMoods} onClose={()=>setDetailAnime(null)} onLike={toggleAnime} onSave={toggleWatchlist} watchlist={watchlist} openAnime={setDetailAnime}/>}
+    <Analytics />
     </>
   );
 }
