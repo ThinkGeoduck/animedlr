@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -118,5 +119,5 @@ function App() {
     </>
   )
 }
-
+<Analytics />
 export default App
