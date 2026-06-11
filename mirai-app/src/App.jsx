@@ -116,8 +116,9 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <Analytics />
     </>
   )
 }
-<Analytics />
+
 export default App
