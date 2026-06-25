@@ -1063,7 +1063,7 @@ export default function MIRAI() {
       <div className="arrival-content">
         <div className="stagger" style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
           <div className="logo-mark">AnimeDLR</div><div className="logo-jp">発見・リスト・推薦</div><div className="logo-rule"/>
-          <p className="tagline">"Find the anime you haven't met yet."</p>
+          <p className="tagline">"Connect your AniList account and get AI-powered anime recommendations based on your unique taste."</p>
         </div>
         <button className="begin-btn" onClick={()=>setScreen("invitation")}>Begin</button>
       </div>
