@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const ANILIST_URL = "https://graphql.anilist.co";
 
@@ -1409,6 +1410,7 @@ export default function MIRAI() {
     </div>
 
     {detailAnime&&<DetailOverlay anime={detailAnime} likedAnime={likedAnime} selectedMoods={selectedMoods} onClose={()=>setDetailAnime(null)} onLike={toggleAnime} onSave={toggleWatchlist} watchlist={watchlist} openAnime={setDetailAnime}/>}
+    <Analytics />
     </>
   );
 }
